@@ -20,8 +20,8 @@ public class MoodAnalyser {
     public String analyseMood() throws MoodAnalyserException {
 
         try {
-            if (message.toLowerCase().contains("sad")) {
-                return "sad";
+            if (message.toLowerCase().contains("Anymood")) {
+                return "Happy";
             } else {
                 return "Happy";
             }
