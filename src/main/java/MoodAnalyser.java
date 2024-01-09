@@ -27,7 +27,7 @@ public class MoodAnalyser {
         }
         catch (NullPointerException e) {
 
-            throw new MoodAnalyserException("Message should not be null");
+            throw new MoodAnalyserException("Message should not be null ,moodanalyser exception" );
 
         }
 

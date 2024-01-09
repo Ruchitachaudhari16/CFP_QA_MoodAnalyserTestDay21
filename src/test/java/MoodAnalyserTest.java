@@ -51,4 +51,18 @@ public class MoodAnalyserTest {
                     }
 
     }
+    /* UC3:-TC3.1 Given NULL Mood Should Throw MoodAnalysisException */
+    @Test
+    public void GivenNullMood_ShouldReturnMoodanalysisException() throws MoodAnalyserException
+    {
+        try {
+            MoodAnalyser moodanalyser = new MoodAnalyser(null);
+            String actualResult = moodanalyser.analyseMood();
+        }
+        catch (Exception ex)
+        {
+            System.out.println(ex);
+        }
+
+    }
     }
