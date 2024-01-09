@@ -19,17 +19,17 @@ public class MoodAnalyser {
     public String analyseMood() throws MoodAnalyserException {
 
         try {
-            if (message.toLowerCase().contains("Sad"))
-            {
+            if (message.toLowerCase().contains("Happy")) {
+                return "sad";
+            } else {
                 return "Sad";
-            } else
-            {
-                return "Happy";
             }
-        }
-        catch (NullPointerException e) {
+        } catch (NullPointerException e) {
             throw new MoodAnalyserException("Enter Invalid Mood, this mood is improper");
 
         }
+
+
+        }
     }
-}
+
