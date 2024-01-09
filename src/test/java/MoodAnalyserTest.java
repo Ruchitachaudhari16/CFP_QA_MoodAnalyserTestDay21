@@ -2,23 +2,12 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class MoodAnalyserTest {
-/* UC1-TC1.1-Given “I am in Sad Mood” message Should Return SAD*/
+/* UC:-1.TC1.1 Refactor:- Given “I am in Sad Mood” message in
+Constructor Should Return SAD*/
     @Test
-    public void whenIaminSadMood_ShouldReturnSad() throws MoodAnalyserException {
-        try {
-            MoodAnalyser moodanalyser = new MoodAnalyser("sad");
-            String actualResult = moodanalyser.analyseMood();
-            Assert.assertEquals("sad",actualResult);
-        }
-        catch(Exception ex) {
-            System.out.println(ex);
-        }
-    }
-    /*UC1-TC1.1:- Given “I am in AnyMood” message Should Return HAPPY*/
-    @Test
-   public void whenIaminAnyMood_ShouldReturnHappy() throws MoodAnalyserException {
+   public void whenGivenSadMood_ShouldReturnSad() throws MoodAnalyserException {
       try {
-           MoodAnalyser moodanalyser = new MoodAnalyser("Sad");
+           MoodAnalyser moodanalyser = new MoodAnalyser("I am in Sad Mood");
             String actualResult = moodanalyser.analyseMood();
           Assert.assertEquals("Happy",actualResult);
        }
