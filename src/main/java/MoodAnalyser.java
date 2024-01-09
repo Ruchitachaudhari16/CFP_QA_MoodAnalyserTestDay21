@@ -26,7 +26,8 @@ public class MoodAnalyser {
             }
         }
         catch (NullPointerException e) {
-            throw new MoodAnalyserException("Enter Invalid Mood, this mood is improper");
+
+            throw new MoodAnalyserException("Message should not be null");
 
         }
 

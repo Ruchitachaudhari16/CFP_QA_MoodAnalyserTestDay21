@@ -25,18 +25,30 @@ public class MoodAnalyserTest {
             System.out.println(ex);
         }
     }
-    /* Handle Exception if User Provides Invalid Mood*/
+    /* UC2:-Handle Exception if User Provides Invalid Mood*/
             @Test
-            public void GivenNullMood_ShouldReturnHappy() throws MoodAnalyserException
-            {
+            public void GivenNullMood_ShouldReturnHappy() throws MoodAnalyserException {
                 try {
                     MoodAnalyser moodanalyser = new MoodAnalyser(null);
                     String actualResult = moodanalyser.analyseMood();
                     Assert.assertEquals("Happy", actualResult);
-                }
-                catch (Exception ex)
-                {
+                } catch (Exception ex) {
                     System.out.println(ex);
                 }
-        }
+            }
+
+        /*UC 3:- Inform user if entered Invalid Mood custom exception*/
+                @Test
+                public void GivenNullMessage_ShouldReturnCustomException() throws MoodAnalyserException
+                {
+                    try {
+                        MoodAnalyser moodanalyser = new MoodAnalyser(null);
+                        String actualResult = moodanalyser.analyseMood();
+                    }
+                    catch (Exception ex)
+                    {
+                        System.out.println(ex);
+                    }
+
+    }
     }
